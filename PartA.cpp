@@ -5,12 +5,16 @@ void target_subarray(std::string a[], std::string b[]);
 
 int main()
 {
-    std::string a[] = {"hemetoaklandrialtofullertonmarcolongchinofresnovallejoclovissimithousand"}; 
-    std::string b[] = {"clovis", "vallejo", "rialto", "marco"};
-    /*std::cout << "Input first array" << std::endl;
-    std::for_each(std::begin(a), std::end(a), [](auto& elem) { std::cin >> elem; });
-    std::cout << "Input second array" << std::endl;
-    std::for_each(std::begin(b), std::end(b), [](auto& elem) { std::cin >> elem; });*/
+    std::string a[1];
+    std::string b[4];
+    std::cout << "Enter the first array" << std::endl;
+    std::cin >> a[0];
+    std::cout << "Enter each element of the second array seperatly" << std::endl;
+    for(int i = 0; i < 4; i++)
+    {
+         std::cin >> b[i];
+    }
+   
     target_subarray(a, b);
  
 
@@ -53,10 +57,18 @@ void target_subarray(std::string a[], std::string b[])
     
    
     
-    
+    std::cout << "[ ";
     for(int i = 0; i < 4; i++)
     {
-        std::cout << a1[i] << " " << first[a1[i]] << std::endl;
+        std::cout << a1[i] << ", ";
     }
+    std::cout << "]" << std::endl;
+    
+    std::cout << "[ ";
+    for(int i = 0; i < 4; i++)
+    {
+        std::cout << first[a1[i]] << ", ";
+    }
+    std::cout << "]" << std::endl;
 
 }
