@@ -7,9 +7,9 @@ int main()
 {
     std::string a[1];
     std::string b[4];
-    std::cout << "Enter the first array" << std::endl;
+    std::cout << "Enter the single concatenation of cities" << std::endl;
     std::cin >> a[0];
-    std::cout << "Enter each element of the second array seperatly" << std::endl;
+    std::cout << "Enter each city in the second array seperatly" << std::endl;
     for(int i = 0; i < 4; i++)
     {
          std::cin >> b[i];
@@ -34,8 +34,6 @@ void target_subarray(std::string a[], std::string b[])
     int cities_length = cities.length();
     
     
-    //int end_of = b.end();
-    //int number_of_cities = sizeof(b);
     
     //Loop thorugh array with cities we are looking for
     for (int i = 0; i < 4 ; i++)
@@ -50,7 +48,6 @@ void target_subarray(std::string a[], std::string b[])
             b1[i] = city;
             first[a1[i]] = b1[i];
         }
-        //std::string::find(cities.begin(), cities.end(), city);
         
     }
     std::sort(a1, a1 + 4);
